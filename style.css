@@ -1,0 +1,141 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body background - dark neon gradient */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle at top left, #0f0f0f, #1c1c1c);
+}
+
+/* Calculator container with glowing border */
+.calculator {
+    background: #111;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4),
+                0 0 40px rgba(0, 255, 255, 0.2),
+                0 0 60px rgba(0, 255, 255, 0.1);
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    width: max-content;
+    transition: transform 0.2s;
+}
+
+/* Slight hover effect on calculator */
+.calculator:hover {
+    transform: scale(1.02);
+}
+
+/* Display styling */
+#display {
+    width: 100%;
+    height: 70px;
+    font-size: 32px;
+    text-align: right;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: none;
+    background: #111;
+    color: #00ffff;
+    margin-bottom: 20px;
+    box-shadow: inset 0 5px 15px rgba(0, 255, 255, 0.3);
+    letter-spacing: 1px;
+}
+
+/* Buttons container grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-auto-rows: 80px;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* General button style */
+.btn {
+    height: 100%;
+    width: 100%;
+    font-size: 24px;
+    border: none;
+    border-radius: 15px;
+    background: #222;
+    color: #00ffff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+/* Neon glow on hover */
+.btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+}
+
+/* Click effect */
+.btn:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+/* Operator buttons */
+.btn.operator {
+    background: #00ffff;
+    color: #111;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.5);
+}
+
+/* Clear button */
+#clear {
+    background: #ff4d6d;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.5);
+}
+
+/* Equals button */
+#equals {
+    background: #7dff4d;
+    color: #111;
+    box-shadow: 0 5px 15px rgba(125, 255, 77, 0.5);
+}
+
+/* Decimal button */
+#decimal {
+    background: #ffb84d;
+    color: #111;
+    box-shadow: 0 5px 15px rgba(255, 184, 77, 0.5);
+}
+
+/* Backspace button */
+#backspace {
+    background: #ffa500;
+    color: #111;
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.5);
+}
+
+/* Responsive for mobile */
+@media (max-width: 500px) {
+    .buttons {
+        grid-template-columns: repeat(4, 60px);
+        grid-auto-rows: 60px;
+        gap: 10px;
+    }
+    #display {
+        font-size: 24px;
+        height: 50px;
+    }
+    .btn {
+        font-size: 20px;
+    }
+}
