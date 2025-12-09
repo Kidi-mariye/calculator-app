@@ -8,7 +8,7 @@ Features include:
 - Responsive design with neon-style theme  
 
 ## Live Demo
-[Netlify Link](https://Kidi-mariye.netlify.app)
+[Netlify Link][(https://Kidi-mariye.netlify.app)](https://app.netlify.com/user/settings)
 
 ## Tech Stack
 - HTML  
