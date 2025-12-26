@@ -7,7 +7,7 @@ const backspace = document.getElementById("backspace");
 let expression = "";
 let lastInput = "";
 
-// Check if a character is operator
+// Check if a character is operators
 function isOperator(char) {
   return ["+", "-", "*", "/"].includes(char);
 }
@@ -91,7 +91,7 @@ async function calculate() {
 }
 
 // Equals button click
-equals.addEventListener("click", calculate);
+equals.addEventListener ("click", calculate);
 
 // Keyboard support
 document.addEventListener("keydown", (e) => {
@@ -104,4 +104,4 @@ document.addEventListener("keydown", (e) => {
   } else if (e.key === "Escape") {
     clear.click();
   }
-});
+}) ;
